@@ -45,8 +45,8 @@ class Main extends React.Component {
           <p>
             After graduating with a B.S. in Computer Science in 2016, I've worn
             quite a few hats. I started my career at ThoughtWorks, where I
-            worked at four different clients taking on a multitude of domains,
-            languages and roles - both across disciplines and software stacks.
+            worked with many clients taking on a multitude of domains, languages
+            and roles - both across disciplines and software stacks.
           </p>
           <p>
             I currently work at GrubHub as a Cloud Infrastructure engineer. That
