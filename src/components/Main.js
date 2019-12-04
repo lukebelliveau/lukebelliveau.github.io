@@ -37,11 +37,7 @@ class Main extends React.Component {
               alt=""
             ></img>
           </span>
-          <p>
-            Hey folks! I'm Luke, a software engineer based in NYC. More details
-            can be found in the Work section of my site, but here's a little bit
-            about me.
-          </p>
+          <p>Hey folks! I'm Luke, a software engineer based in NYC.</p>
           <p>
             After graduating with a B.S. in Computer Science in 2016, I've worn
             quite a few hats. I started my career at ThoughtWorks, where I
@@ -82,7 +78,76 @@ class Main extends React.Component {
           </p>
           {close}
         </article>
+        <article
+          id="work"
+          className={`${this.props.article === 'work' ? 'active' : ''} ${
+            this.props.articleTimeout ? 'timeout' : ''
+          }`}
+          style={{ display: 'none' }}
+        >
+          <h2 className="major">Work with Luke</h2>
+          <p>
+            I've worked with clients on a wide range of budgets, timescales, and
+            expectations. Clients tend to find me quite reasonable and
+            dependable.{' '}
+            <a href="mailto:luke@belliveau.org">Email me (click here)</a>, and
+            I'm sure we can work something out.
+          </p>
+          <p>
+            You can find my full CV on the next tab, but here's a quick,
+            non-exhaustive list of skills and technologies I'm comfortable
+            working with:
+          </p>
+          <b>Languages</b>
+          <ul className="indented-list">
+            <li>JavaScript (+TypeScript)</li>
+            <li>Java</li>
+            <li>GoLang</li>
+            <li>C#</li>
+            <li>Swift</li>
+            <li>C/C++</li>
+            <li>Python</li>
+          </ul>
+          <b>Frameworks, Services, & Runtimes</b>
+          <ul className="indented-list">
+            <li>React // React Native // ReactVR</li>
+            <li>Redux</li>
+            <li>Expo.io</li>
+            <li>Gatsby</li>
+            <li>Hugo</li>
+            <li>Node.js</li>
+            <li>Guice</li>
+            <li>Spring</li>
+            <li>.NET</li>
+            <li>SSO (Okta, Apple, Google, Facebook)</li>
+          </ul>
+          <b>Infrastructure, Pipeline, & Deployment</b>
+          <ul className="indented-list">
+            <li>AWS (namely EC2, S3, and related services)</li>
+            <li>Eureka</li>
+            <li>Envoy</li>
+            <li>Jenkins</li>
+            <li>Spinnaker</li>
+            <li>Bamboo</li>
+            <li>Heroku</li>
+          </ul>
+          <b>Testing</b>
 
+          <ul className="indented-list">
+            <li>Jest</li>
+            <li>react-testing-library</li>
+            <li>Cypress</li>
+            <li>Selenium</li>
+            <li>JUnit</li>
+            <li>Mocha</li>
+            <li>Enzyme</li>
+            <li>Jasmine</li>
+            <li>testdouble</li>
+            <li>Sinon</li>
+          </ul>
+
+          {close}
+        </article>
         <article
           id="cv"
           className={`${this.props.article === 'cv' ? 'active' : ''} ${
@@ -97,33 +162,38 @@ class Main extends React.Component {
             At GrubHub, Luke serves as a Cloud Infrastructure engineer. That
             means he designs and deevelops frameworks, tools, and services that
             enable other GrubHub engineers to do their jobs as efficiently as
-            they can. Among Luke's accomplishments and responsibilities are:
-            <ul>
-              <li>
-                Engineering changes to core framework to facilitate
-                communication between microservices in a new Envoy service mesh
-                architecture
-              </li>
-              <li>
-                Leading integration of SMS service with a new provider, handling
-                the development, evaluation, and communication with stakeholders
-                on both ends
-              </li>
-              <li>
-                Ownership of Notifications stack of microservices in Java,
-                spanning SMS, mobile push, email, and fax functionalities
-              </li>
-              <li>
-                Independently building a service in React &amp; Python used by
-                Site Reliability Engineers to view system status and make
-                changes during outages
-              </li>
-              <li>
-                Designing a new microservice architecture and Cassandra data
-                model used for a new notifications template authoring service
-              </li>
-            </ul>
+            they can.
           </p>
+          <p>
+            Beyond his work on building frameworks & tools using Java,
+            JavaScript and Python, Luke has had loads of experience with AWS,
+            Docker, and Spinnaker. His accomplishments at GrubHub include:
+          </p>
+          <ul>
+            <li>
+              Engineering changes to core framework to facilitate communication
+              between microservices in a new Envoy service mesh architecture
+            </li>
+            <li>
+              Leading integration of SMS service with a new provider, handling
+              the development, evaluation, and communication with stakeholders
+              on both ends
+            </li>
+            <li>
+              Ownership of Notifications stack of microservices in Java (with
+              Guice and Spring), spanning SMS, mobile push, email, and fax
+              functionalities
+            </li>
+            <li>
+              Independently building a service in React &amp; Python used by
+              Site Reliability Engineers to view system status and make changes
+              during outages
+            </li>
+            <li>
+              Designing a new microservice architecture and Cassandra data model
+              used for a new notifications template authoring service
+            </li>
+          </ul>
           <h3>ThoughtWorks - Senior Consultant Engineer</h3>
           <h4>New York, NY | 2016 - 2018</h4>
           <p>
@@ -133,111 +203,188 @@ class Main extends React.Component {
             Beyond just designing and implementing systems for his clients, Luke
             worked closely with business stakeholders, designers, and product
             analysts to ensure that the business would get the product they
-            needed. Below is a summary of his work for each of his clients.
+            needed in a timely fashion. Below is a summary of his work for each
+            of his clients.
           </p>
-          <h4>Cybersecurity Startup</h4>
-          <h5>New York, NY</h5>
-          <ul>
-            <li>
-              Built interface enabling security analysts to examine potential
-              cybersecurity threats and take action
-            </li>
-            <li>
-              Collaborated with potential users, experience designers, and
-              product owners to create direction and design for new product
-            </li>
-            <li>
-              Worked with experience designers to create and implement a set of
-              custom data visualizations using SVGs and Highcharts atop a Vue
-              front end
-            </li>
-            <li>
-              Built a comprehensive backend-for-frontend in Golang to aggregate,
-              analyze, &amp; perform operations on data before serving to the
-              client
-            </li>
-          </ul>
-          <h4>E-Commerce Retailer</h4>
-          <h5>Boca Raton, FL</h5>
-          <ul>
-            <li>
-              Designed APIs to facilitate communication among new, modular
-              services and legacy REST endpoints in Node.js and C#
-            </li>
-            <li>
-              Architected modules to pass messages between GCP Pub/Sub, Kafka &
-              SQL databases in Node.js, C# and Java
-            </li>
-            <li>
-              Introduced and championed best testing practices in a Node.js
-              codebase using Jest, testdouble.js, and Mocha
-            </li>
-            <li>
-              Served as line of communication between stakeholders for multiple
-              companies, managing a variety of codebases, priorities, and
-              business requirements
-            </li>
-            <li>
-              Coached client developers on XP practices such as test-driven
-              development and pair programming
-            </li>
-            <li>
-              Established and facilitated agile practices on a young team
-              including retros, code reviews, and tech debt management
-            </li>
-          </ul>
-          <h4>Insurance Provider</h4>
-          <h5>Lansing, MI</h5>
-          <ul>
-            <li>
-              Served as an application developer and JavaScript specialist on a
-              web platform for one of the largest insurance companies in the
-              U.S.
-            </li>
-            <li>
-              Led design of React component hierarchies and Redux state
-              management architecture for two greenfield codebases
-            </li>
-            <li>
-              Designed comprehensive unit, integration & functional test suites,
-              drove account-wide direction of testing strategy with Enzyme, Chai
-              and Mocha
-            </li>
-            <li>
-              Coached developers & QAs in React, Redux, ES6 fundamentals & best
-              practices
-            </li>
-            <li>
-              Wrote & tested code for a Spring Boot microservice architecture
-            </li>
-          </ul>
-          <h4>Consulting Agency</h4>
-          <h5>Chicago, IL</h5>
-          <ul>
-            <li>
-              Developed software used to track employee information for a
-              leading consulting firm
-            </li>
-            <li>
-              Extended codebase for a web application built with Java & ES5
-              JavaScript, SpringMVC, and PostgreSQL, tested with Jasmine,
-              Selenium, and JUnit
-            </li>
-            <li>
-              Practiced continuous integration on a snapCI pipeline, deploying
-              to Heroku
-            </li>
-            <li>
-              Spearheaded successful effort to integrate Spring Security and
-              Okta SSO into the application
-            </li>
-            <li>
-              Practiced non-technical skills by facilitating discussions on team
-              ceremonies, providing a developer perspective on story analysis,
-              and leading communication between the team and external entities
-              such as product owners, DevOps, and domain experts
-            </li>
-          </ul>
+          <div className="subsection">
+            <h4>Cybersecurity Startup</h4>
+            <h5>New York, NY</h5>
+            <ul>
+              <li>
+                Built interface enabling security analysts to examine potential
+                cybersecurity threats and take action
+              </li>
+              <li>
+                Collaborated with potential users, experience designers, and
+                product owners to create direction and design for new product
+              </li>
+              <li>
+                Worked with experience designers to create and implement a set
+                of custom data visualizations using SVGs and Highcharts atop a
+                Vue front end
+              </li>
+              <li>
+                Built a comprehensive backend-for-frontend in Golang to
+                aggregate, analyze, &amp; perform operations on data before
+                serving to the client
+              </li>
+            </ul>
+          </div>
+          <div className="subsection">
+            <h4>E-Commerce Retailer</h4>
+            <h5>Boca Raton, FL</h5>
+            <ul>
+              <li>
+                Designed APIs to facilitate communication among new, modular
+                services and legacy REST endpoints in Node.js and C#
+              </li>
+              <li>
+                Architected modules to pass messages between GCP Pub/Sub, Kafka
+                & SQL databases in Node.js, C# and Java
+              </li>
+              <li>
+                Introduced and championed best testing practices in a Node.js
+                codebase using Jest, testdouble.js, and Mocha
+              </li>
+              <li>
+                Served as line of communication between stakeholders for
+                multiple companies, managing a variety of codebases, priorities,
+                and business requirements
+              </li>
+              <li>
+                Coached client developers on XP practices such as test-driven
+                development and pair programming
+              </li>
+              <li>
+                Established and facilitated agile practices on a young team
+                including retros, code reviews, and tech debt management
+              </li>
+            </ul>
+          </div>
+          <div className="subsection">
+            <h4>Insurance Provider</h4>
+            <h5>Lansing, MI</h5>
+            <ul>
+              <li>
+                Served as an application developer and JavaScript specialist on
+                a web platform for one of the largest insurance companies in the
+                U.S.
+              </li>
+              <li>
+                Led design of React component hierarchies and Redux state
+                management architecture for two greenfield codebases
+              </li>
+              <li>
+                Designed comprehensive unit, integration & functional test
+                suites, drove account-wide direction of testing strategy with
+                Enzyme, Chai and Mocha
+              </li>
+              <li>
+                Coached developers & QAs in React, Redux, ES6 fundamentals &
+                best practices
+              </li>
+              <li>
+                Wrote & tested code for a Spring Boot microservice architecture
+              </li>
+            </ul>
+          </div>
+          <div className="subsection">
+            <h4>Consulting Agency</h4>
+            <h5>Chicago, IL</h5>
+            <ul>
+              <li>
+                Developed software used to track employee information for a
+                leading consulting firm
+              </li>
+              <li>
+                Extended codebase for a web application built with Java & ES5
+                JavaScript, SpringMVC, and PostgreSQL, tested with Jasmine,
+                Selenium, and JUnit
+              </li>
+              <li>
+                Practiced continuous integration on a snapCI pipeline, deploying
+                to Heroku
+              </li>
+              <li>
+                Spearheaded successful effort to integrate Spring Security and
+                Okta SSO into the application
+              </li>
+              <li>
+                Practiced non-technical skills by facilitating discussions on
+                team ceremonies, providing a developer perspective on story
+                analysis, and leading communication between the team and
+                external entities such as product owners, DevOps, and domain
+                experts
+              </li>
+            </ul>
+          </div>
+          <h3>Freelance Developer</h3>
+          <p>
+            Luke has also delivered a collection of projects as a freelancer.
+            His contributions include independent work with not-for-profit
+            organizations, independent entrepreneurs, musical acts, and pro-bono
+            work for causes in need.
+          </p>
+          <div className="subsection">
+            <h4>Selenium - official website</h4>
+            <p>
+              Luke built the website for Selenium, a popular testing automation
+              suite. It can be seen{' '}
+              <a href="https://selenium.dev/" target="_blank">
+                here
+              </a>
+              .
+            </p>
+          </div>
+          <div className="subsection">
+            <h4>Devil's Dice Game</h4>
+            <p>
+              Luke was approached by an entrepreneur looking for someone to
+              design & develop a mobile game. Luke quickly got to work helping
+              the client sketch up wireframes based on his ideas, and created a
+              prototype overnight as something to show to potential investors.
+              The prototype was effective enough to impress investors, and the
+              client took Luke on to make the game a reality. Devil's Dice Game
+              has thousands of downloads, and enjoys a 5-star rating in both the{' '}
+              <a href="https://apps.apple.com/us/app/devils-dice-drinking-game/id1453297745">
+                Apple App Store
+              </a>{' '}
+              and{' '}
+              <a href="https://play.google.com/store/apps/details?id=com.devilsdicegame.devilsdice&amp;hl=en_US">
+                Google Play Store
+              </a>
+              .
+            </p>
+          </div>
+          <div className="subsection">
+            <h4>matchUS</h4>
+            <p>
+              Luke independently built a peer-to-peer platform enabling
+              charitable donors and benefactors to match donations to charitable
+              organizations. Luke built this platform with a React front-end
+              leveraging APIs from Twitter, Zapier, and Dropbox. After open
+              sourcing the project, Luke managed an ad-hoc team of 20 volunteer
+              developers, analysts, and experience designers located in six
+              different countries around the world. At its peak, matchUS was
+              servicing over 1,600 users in a day. Through matchUS, users shared
+              over <b>$760,000</b> in matched donations.
+            </p>
+          </div>
+          <div className="subsection">
+            <h4>SATURATION - official app for boyband BROCKHAMPTON</h4>
+            <p>
+              Luke was commissioned to build the official Android app for music
+              collective BROCKHAMPTON. SATURATION is used by the band to debut
+              new music videos to fans before they are officially released on
+              other channels, such as YouTube. Luke obtained assets from the
+              band's graphic designers and built the app over a weekend,
+              publishing it in the same week. The application was built with
+              React Native on the Expo platform. SATURATION has been installed
+              by over 10,000 users and enjoyed a rating of five stars on the
+              Google Play Store.
+            </p>
+          </div>
+
           {close}
         </article>
 

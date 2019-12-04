@@ -10,10 +10,12 @@ const Header = props => (
       <div className="inner">
         <h1>Luke Belliveau</h1>
         <p>
-          Hi! I'm a software engineer.
-          <br></br>
+          Hi! I'm a fullstack software engineer.
+          <br style={{ display: 'block' }}></br>
+          Cloud infra (AWS/GCP), web, and mobile developer.
+          <br style={{ display: 'block' }}></br>
           I'm currently available for freelance hire.
-          <br></br>
+          <br style={{ display: 'block' }}></br>
           Click below to learn more.
         </p>
       </div>
@@ -28,6 +30,16 @@ const Header = props => (
             }}
           >
             Intro
+          </a>
+        </li>
+        <li>
+          <a
+            href="javascript:;"
+            onClick={() => {
+              props.onOpenArticle('work')
+            }}
+          >
+            Work With Luke
           </a>
         </li>
         <li>
