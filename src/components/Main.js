@@ -211,8 +211,8 @@ class Main extends React.Component {
               Wrote & tested code for a Spring Boot microservice architecture
             </li>
           </ul>
-          <h4>Insurance Provider</h4>
-          <h5>Lansing, MI</h5>
+          <h4>Consulting Agency</h4>
+          <h5>Chicago, IL</h5>
           <ul>
             <li>
               Developed software used to track employee information for a
