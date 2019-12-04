@@ -84,13 +84,13 @@ class Main extends React.Component {
         </article>
 
         <article
-          id="work"
-          className={`${this.props.article === 'work' ? 'active' : ''} ${
+          id="cv"
+          className={`${this.props.article === 'cv' ? 'active' : ''} ${
             this.props.articleTimeout ? 'timeout' : ''
           }`}
           style={{ display: 'none' }}
         >
-          <h2 className="major">Work</h2>
+          <h2 className="major">CV</h2>
           <h3>GrubHub - Cloud Infrastructure Engineer</h3>
           <h4>New York, NY | 2018 - Present</h4>
           <p>
@@ -125,7 +125,7 @@ class Main extends React.Component {
             </ul>
           </p>
           <h3>ThoughtWorks - Senior Consultant Engineer</h3>
-          <h4>Chicago, IL | 2016 - 2018</h4>
+          <h4>New York, NY | 2016 - 2018</h4>
           <p>
             Luke served as a Senior Consultant Engineer at ThoughtWorks. In this
             role he traveled weekly to clients, integrating with teams and
@@ -157,26 +157,85 @@ class Main extends React.Component {
               client
             </li>
           </ul>
-          <h4>Cybersecurity Startup</h4>
-          <h5>New York, NY</h5>
+          <h4>E-Commerce Retailer</h4>
+          <h5>Boca Raton, FL</h5>
           <ul>
             <li>
-              Built interface enabling security analysts to examine potential
-              cybersecurity threats and take action
+              Designed APIs to facilitate communication among new, modular
+              services and legacy REST endpoints in Node.js and C#
             </li>
             <li>
-              Collaborated with potential users, experience designers, and
-              product owners to create direction and design for new product
+              Architected modules to pass messages between GCP Pub/Sub, Kafka &
+              SQL databases in Node.js, C# and Java
             </li>
             <li>
-              Worked with experience designers to create and implement a set of
-              custom data visualizations using SVGs and Highcharts atop a Vue
-              front end
+              Introduced and championed best testing practices in a Node.js
+              codebase using Jest, testdouble.js, and Mocha
             </li>
             <li>
-              Built a comprehensive backend-for-frontend in Golang to aggregate,
-              analyze, &amp; perform operations on data before serving to the
-              client
+              Served as line of communication between stakeholders for multiple
+              companies, managing a variety of codebases, priorities, and
+              business requirements
+            </li>
+            <li>
+              Coached client developers on XP practices such as test-driven
+              development and pair programming
+            </li>
+            <li>
+              Established and facilitated agile practices on a young team
+              including retros, code reviews, and tech debt management
+            </li>
+          </ul>
+          <h4>Insurance Provider</h4>
+          <h5>Lansing, MI</h5>
+          <ul>
+            <li>
+              Served as an application developer and JavaScript specialist on a
+              web platform for one of the largest insurance companies in the
+              U.S.
+            </li>
+            <li>
+              Led design of React component hierarchies and Redux state
+              management architecture for two greenfield codebases
+            </li>
+            <li>
+              Designed comprehensive unit, integration & functional test suites,
+              drove account-wide direction of testing strategy with Enzyme, Chai
+              and Mocha
+            </li>
+            <li>
+              Coached developers & QAs in React, Redux, ES6 fundamentals & best
+              practices
+            </li>
+            <li>
+              Wrote & tested code for a Spring Boot microservice architecture
+            </li>
+          </ul>
+          <h4>Insurance Provider</h4>
+          <h5>Lansing, MI</h5>
+          <ul>
+            <li>
+              Developed software used to track employee information for a
+              leading consulting firm
+            </li>
+            <li>
+              Extended codebase for a web application built with Java & ES5
+              JavaScript, SpringMVC, and PostgreSQL, tested with Jasmine,
+              Selenium, and JUnit
+            </li>
+            <li>
+              Practiced continuous integration on a snapCI pipeline, deploying
+              to Heroku
+            </li>
+            <li>
+              Spearheaded successful effort to integrate Spring Security and
+              Okta SSO into the application
+            </li>
+            <li>
+              Practiced non-technical skills by facilitating discussions on team
+              ceremonies, providing a developer perspective on story analysis,
+              and leading communication between the team and external entities
+              such as product owners, DevOps, and domain experts
             </li>
           </ul>
           {close}
@@ -194,13 +253,25 @@ class Main extends React.Component {
             <img src={lake} alt="" />
           </span>
           <p>
-            Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent
-            eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam
-            erat volutpat. Praesent urna nisi, fringila lorem et vehicula
-            lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.
-            Aliquam libero et malesuada fames ac ante ipsum primis in faucibus.
-            Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit
-            amet.
+            I've loved working with computers all my life. From my Lego
+            Mindstorms team as a boy, to bricking every Android phone I could
+            get my hands on in high school, to dropping that Chemistry major
+            right after taking my first CS class, I've always been grateful to
+            have the opportunity to do something that I love.
+          </p>
+          <p>
+            Code isn't everything, though - far from it. An engineer who only
+            knows how to write code isn't much of an engineer at all. I feel
+            strongly that the best products are built by multidisciplinary teams
+            of folks respecting the skills and experiences that each member can
+            bring to the table.
+          </p>
+          <p>
+            Of course, platitudes about good code and product development aren't
+            everything, either ;). I play a bit of guitar & piano, and I put
+            nearly all of my free time into tickets - namely plane tickets, lift
+            tickets, and concert tickets. If you'd ever want to chat about the
+            nontechnical stuff, consider my DMs open!
           </p>
           {close}
         </article>
@@ -213,7 +284,7 @@ class Main extends React.Component {
           style={{ display: 'none' }}
         >
           <h2 className="major">Contact</h2>
-          <form method="post" action="#">
+          <form method="post" action="mailto:luke.belliveau@gmail.com">
             <div className="field half first">
               <label htmlFor="name">Name</label>
               <input type="text" name="name" id="name" />
@@ -235,34 +306,6 @@ class Main extends React.Component {
               </li>
             </ul>
           </form>
-          <ul className="icons">
-            <li>
-              <a
-                href="https://twitter.com/HuntaroSan"
-                className="icon fa-twitter"
-              >
-                <span className="label">Twitter</span>
-              </a>
-            </li>
-            <li>
-              <a href="https://codebushi.com" className="icon fa-facebook">
-                <span className="label">Facebook</span>
-              </a>
-            </li>
-            <li>
-              <a href="https://codebushi.com" className="icon fa-instagram">
-                <span className="label">Instagram</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://github.com/codebushi/gatsby-starter-dimension"
-                className="icon fa-github"
-              >
-                <span className="label">GitHub</span>
-              </a>
-            </li>
-          </ul>
           {close}
         </article>
       </div>

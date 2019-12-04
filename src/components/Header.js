@@ -33,10 +33,10 @@ const Header = props => (
           <a
             href="javascript:;"
             onClick={() => {
-              props.onOpenArticle('work')
+              props.onOpenArticle('cv')
             }}
           >
-            Work
+            CV
           </a>
         </li>
         <li>
@@ -47,16 +47,6 @@ const Header = props => (
             }}
           >
             About
-          </a>
-        </li>
-        <li>
-          <a
-            href="javascript:;"
-            onClick={() => {
-              props.onOpenArticle('contact')
-            }}
-          >
-            Contact
           </a>
         </li>
       </ul>
