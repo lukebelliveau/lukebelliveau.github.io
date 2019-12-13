@@ -12,9 +12,7 @@ const Header = props => (
         <p>
           Hi! I'm a fullstack software engineer.
           <br style={{ display: 'block' }}></br>
-          Cloud infra (AWS/GCP), web, and mobile developer.
-          <br style={{ display: 'block' }}></br>
-          I'm currently available for freelance hire.
+          Cloud Infra (AWS/GCP) //  Web // Mobile.
           <br style={{ display: 'block' }}></br>
           Click below to learn more.
         </p>
